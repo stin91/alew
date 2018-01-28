@@ -1,17 +1,14 @@
 <?php 
  
-/**
- * Description: User authentication
- * @author Prem Tiwari
- */
- 
+
 //include database connection file
 require_once 'config.php';
- 
+ $us=$_POST['username'];
+ $pas=$_POST['password'];
 //define database object
 global $dbc;
  $q="SELECT Username, Password FROM utente WHERE
-Username='".$_POST['username']."' && Password='". ($_POST['password'])."'";
+Username='".$us."' && Password='".$pas."'";
  
 $stmt = $dbc->prepare($q);
  
