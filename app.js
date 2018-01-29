@@ -20,6 +20,6 @@ angular.module('postLogin', [])
                         } else {
                             $scope.errorMsg = "Username and password do not match.";
                         }
-                })            
+                });            
             }
     }]);
